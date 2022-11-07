@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="scripts/js/jquery-3.6.0.min.js"></script>
+    <script src="scripts/js/signin_signup.js" defer></script>
+    <script src="assets/js/index_interaction.js" defer></script>
+    <title>App SignIn/SignUp</title>
+</head>
+
+<body>
+    <p class="popup"></p>
+    <!-- Signin/SignUp Portals Here -->
+    <div class="container">
+        <!-- Sign In Starts Here -->
+        <section class="user-signin" id="user-signin">
+            <form id="signinform">
+                <div class="signin-header">
+                    <div class="header-titles">
+                        <h1>Sign In</h1>
+                        <h5>to gain access.</h5>
+                    </div>
+                    <div class="header-redirect">
+                        <p>Don't have an account? <a href="#user-signup">Sign Up</a> </p>
+                    </div>
+                </div>
+                <br>
+                <div class="user-inputs">
+                    <span class="inputs">
+                        <input type="text" name="" id="inputusername" required>
+                        <label for="inputusername">Username</label>
+                    </span>
+                    <span class="inputs">
+                        <input type="password" name="" id="inputpassword" required
+                            title="Double Click to show password">
+                        <label for="inputpassword">Password</label>
+                    </span>
+                    <span class="checkbx">
+                        <input type="checkbox" name="" id="showpassword" hidden>
+                        <label for="showpassword" id="showpassword_lbl">Show Password</label>
+                    </span>
+                </div>
+                <div class="user-submit">
+                    <input type="submit" value="Sign In" id="btnSignin">
+                    <p>Forgot Password? <a href="views/forgot.html">Retrieve</a></p>
+                </div>
+            </form>
+        </section>
+        <!-- SignUp Starts Here -->
+        <section class="user-signup" id="user-signup">
+            <form id="signupform">
+                <div class="signup-header">
+                    <div class="header-titles">
+                        <h1>Sign Up</h1>
+                        <h5>to access app</h5>
+                    </div>
+                </div>
+                <br>
+                <div class="user-inputs">
+                    <span class="inputs">
+                        <input type="text" name="" id="inputusernameC" required>
+                        <label for="">Create Username</label>
+                    </span>
+                    <span class="inputs">
+                        <input type="password" name="" id="inputpasswordC" required>
+                        <label for="">Create Password</label>
+                    </span>
+                    <span class="checkbx">
+                        <input type="checkbox" name="" id="showpasswordC" hidden>
+                        <label for="showpasswordC" id="showpassword_lblC">Show Password</label>
+                    </span>
+                </div>
+                <div class="user-submit">
+                    <input type="submit" value="Sign Up">
+                    <p>Already have an account? <a href="#user-signin">Sign In</a></p>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>

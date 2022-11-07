@@ -1,0 +1,297 @@
+* {
+    margin         : 0;
+    padding        : 0;
+    box-sizing     : border-box;
+    transition     : .3s ease;
+    text-decoration: none;
+    outline        : none;
+    font-family    : 'Segoe UI EMOJI';
+    text-align     : justify;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* height          : 100%; */
+    /* background-color: royalblue; */
+    position: relative;
+}
+
+body::-webkit-scrollbar {
+    background-color: #0009;
+    width           : 8px;
+}
+
+
+body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius   : 1em;
+}
+
+.newtask_module {
+    position       : absolute;
+    top            : 0;
+    left           : 0;
+    height         : 100%;
+    width          : 100%;
+    backdrop-filter: blur(20px);
+    z-index        : 1;
+
+}
+
+.container {
+    display        : flex;
+    flex-direction : column;
+    justify-content: stretch;
+    align-items    : center;
+}
+
+
+.container .content {
+    /* background-color: #fff; */
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : stretch;
+    width          : 100%;
+    gap            : 1em;
+}
+
+.container .content .nav-tasks {
+    display         : flex;
+    flex-direction  : row;
+    justify-content : space-between;
+    align-items     : center;
+    flex-wrap       : wrap;
+    gap             : .5em;
+    padding         : 1em;
+    position        : sticky;
+    width           : 100%;
+    top             : 0;
+    left            : 0;
+    z-index         : 1;
+    background-color: #FFF;
+}
+
+.container .content .nav-tasks .right-nav {
+    display        : flex;
+    gap            : 5px;
+    justify-content: stretch;
+    align-items    : center;
+}
+
+.container .content .nav-tasks .right-nav label,
+.container .content .nav-tasks .left-nav label {
+    font-size     : .8em;
+    font-weight   : bold;
+    text-transform: uppercase;
+}
+
+.container .content .nav-tasks .right-nav input {
+    padding      : .5em;
+    border-radius: .5em;
+    border       : 2px solid dimgray;
+}
+
+.container .content .nav-tasks .right-nav button {
+    padding       : .5em;
+    border-radius : .5em;
+    font-weight   : bold;
+    color         : #fff;
+    letter-spacing: 1.3px;
+    text-shadow   : 1px 1px 1px black;
+    cursor        : pointer;
+}
+
+.container .content .nav-tasks .right-nav button:nth-child(3) {
+    background-color: royalblue;
+    border          : 2px solid royalblue;
+}
+
+.container .content .nav-tasks .right-nav button:nth-child(4) {
+    background-color: aqua;
+    border          : 2px solid aqua;
+}
+
+.container .content .nav-tasks .right-nav button:nth-child(5) {
+    background-color: orangered;
+    border          : 2px solid orangered;
+}
+
+.container .content .nav-tasks .right-nav button:nth-child(6) {
+    background-color: crimson;
+    border          : 2px solid crimson;
+}
+
+
+.container .content .nav-tasks .left-nav {
+    display        : flex;
+    gap            : .5em;
+    flex-direction : row;
+    justify-content: stretch;
+    align-items    : center;
+}
+
+.container .content .nav-tasks .left-nav select {
+    padding      : .5em;
+    border-radius: .5em;
+    border       : 2px solid dimgray;
+    cursor       : pointer;
+}
+
+.container .content .nav-tasks .left-nav button {
+    padding         : .5em;
+    border-radius   : .5em;
+    font-weight     : bold;
+    color           : #fff;
+    letter-spacing  : 1.3px;
+    text-shadow     : 1px 1px 1px black;
+    cursor          : pointer;
+    background-color: royalblue;
+    border          : 2px royalblue solid;
+}
+
+.content-task {
+    width          : 100%;
+    display        : flex;
+    justify-content: stretch;
+    align-items    : flex-start;
+    padding        : 1em;
+    flex-wrap      : wrap;
+    gap            : .5em;
+}
+
+.task-card {
+    flex            : auto 1;
+    background-color: lightblue;
+    padding         : 1em;
+    border-radius   : 5px;
+
+    display        : flex;
+    flex-direction : column;
+    align-items    : stretch;
+    justify-content: stretch;
+    gap            : 1em;
+    height         : fit-content;
+}
+
+.task-card .task {
+    display        : flex;
+    flex-direction : column;
+    gap            : .5em;
+    justify-content: stretch;
+}
+
+.task-card .task .task-title {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    align-items    : baseline;
+}
+
+.task-card .task .task-title h5 {
+    padding      : 5px;
+    border-radius: 5px;
+    color        : #fff;
+}
+
+.task-card .task .task-title h5:nth-child(1) {
+    background-color: royalblue;
+}
+
+.task-card .task .task-title h5:nth-child(3) {
+    background-color: crimson;
+}
+
+.task-card .task .task-name {
+    text-align: center;
+}
+
+.task-card .task .task-name h1 {
+    text-align: center;
+    width     : 100%;
+}
+
+.task-card .task .task-descr {
+    background-color: #fff;
+    border-radius   : 5px;
+    padding         : 5px;
+
+}
+
+.task-card .task .task-descr p {
+    font-size: .8em;
+}
+
+.task-card .task .task-sub {
+    border-radius   : 5px;
+    display         : flex;
+    flex-direction  : column;
+    padding         : 10px;
+    background-color: azure;
+}
+
+.task-card .task .task-sub summary {
+    cursor       : pointer;
+    padding      : 5px;
+    border-radius: 5px;
+    display      : flex;
+}
+
+.task-card .task .task-sub .sub-div {
+    background-color: orange;
+    padding         : 5px;
+    display         : flex;
+}
+
+
+.task-card .task-actions {
+    display            : flex;
+    flex-direction     : row;
+    justify-content    : start;
+    align-items        : center;
+    gap                : 5px;
+    width              : fit-content;
+    /* background-color: #fff; */
+    padding            : 5px;
+    border-radius      : 5px;
+}
+
+.task-card .task-actions a {
+    padding       : 5px;
+    font-weight   : bold;
+    letter-spacing: 1px;
+    text-shadow   : 1px 1px 1px black;
+}
+
+.task-card .task-actions a:nth-child(2) {
+    color: yellow;
+}
+
+.task-card .task-actions a:nth-child(2):hover {
+    background-color: yellow;
+    color           : #fff;
+    border-radius   : 1em;
+}
+
+.task-card .task-actions a:nth-child(3) {
+    color: orangered;
+}
+
+.task-card .task-actions a:nth-child(3):hover {
+    background-color: orangered;
+    color           : #fff;
+    border-radius   : 1em;
+}
+
+.task-card .task-actions a:nth-child(4) {
+    color: crimson;
+}
+
+.task-card .task-actions a:nth-child(4):hover {
+    background-color: crimson;
+    color           : #fff;
+    border-radius   : 1em;
+}

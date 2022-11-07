@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script src="../scripts/js/jquery-3.6.0.min.js"></script>
+    <script src="../scripts/js/main.js" defer></script>
+    <script src="../scripts/js/checkUserstate.js" defer></script>
+    <title>My Tasks</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="content">
+            <section class="nav-tasks">
+                <span class="right-nav">
+                    <label for="">Search Tasks :</label>
+                    <input type="text" name="" id="findtask">
+                    <button id="btnsearchtask">Search</button>
+                    <button id="newtask">Actions</button>
+                    <button>Clear Task</button>
+                    <button id="btnLogout">Logout</button>
+                </span>
+                <span class="left-nav">
+                    <label for="">SORT : </label>
+                    <select name="" id="">
+                        <option value="">Date Added</option>
+                        <option value="">Finished</option>
+                        <option value="">Ongoing</option>
+                    </select>
+                    <label for="">ORDER BY : </label>
+                    <select name="" id="">
+                        <option value="">ASCENDING</option>
+                        <option value="">DESCENDING</option>
+                    </select>
+                    <button>SORT</button>
+                </span>
+            </section>
+            <hr>
+            <section class="content-task" id="content_task">
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

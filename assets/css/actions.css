@@ -1,0 +1,99 @@
+* {
+    margin         : 0;
+    padding        : 0;
+    font-family    : 'Segoe UI Emoji';
+    box-sizing     : border-box;
+    text-decoration: none;
+    outline        : none;
+    transition     : .3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height          : 100%;
+    background-color: cornflowerblue;
+}
+
+body::-webkit-scrollbar {
+    background-color: #0009;
+    width           : 8px;
+}
+
+
+body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius   : 1em;
+}
+
+nav {
+    width           : 100%;
+    background-color: #fff;
+    padding         : 1em;
+    display         : flex;
+    flex-direction  : row;
+    justify-content : space-between;
+}
+
+nav a {
+    padding         : .5em;
+    background-color: rebeccapurple;
+    color           : #fff;
+    border-radius   : .5em;
+}
+
+.container {
+    height            : 100vh;
+    display           : flex;
+    flex-direction    : column;
+    justify-content   : center;
+    align-items       : center;
+    gap               : 1em;
+}
+
+.container form {
+    padding         : .5em;
+    background-color: #fff;
+    width           : 450px;
+    display         : flex;
+    flex-direction  : column;
+    gap             : 1em;
+    padding         : .5em;
+    border-radius   : .5em;
+}
+
+
+.container form .form_inputs {
+    display        : flex;
+    flex-direction : column;
+    justify-content: stretch;
+    align-items    : stretch;
+    gap            : .5em;
+}
+
+.container form .form_inputs .inputs {
+    display       : flex;
+    flex-direction: column;
+    gap           : 5px;
+}
+
+.container form .form_inputs .inputs :is(input, select) {
+    border       : 1.5px solid black;
+    font-weight  : bold;
+    border-radius: 10px;
+    padding      : .5em;
+}
+
+.container form .form_submit input {
+    padding         : .5em;
+    font-size       : 1em;
+    border-radius   : 5px;
+    border          : none;
+    background-color: royalblue;
+    text-transform  : uppercase;
+    font-weight     : bold;
+    color           : #fff;
+    cursor          : pointer;
+}

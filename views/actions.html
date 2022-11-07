@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/actions.css">
+    <script src="../scripts/js/jquery-3.6.0.min.js"></script>
+    <script src="../scripts/js/checkUserstate.js" defer></script>
+    <script src="../scripts/js/actions.js" defer></script>
+    <title>Actions</title>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <a href="main.html">Home</a>
+            <a href="../scripts/controllers/logout.php?logout">Logout</a>
+        </div>
+        <div>
+            <a href="?create">Create Task</a>
+            <a href="?subtask">Add Sub Task</a>
+            <a href="?delete">Delete Task</a>
+        </div>
+    </nav>
+    <div class="container">
+        <form method="post" id="form_create_task">
+            <section class="form_title">
+                <h1>Create Task</h1>
+            </section>
+            <section class="form_inputs">
+                <span class="inputs">
+                    <label for="">Task Name</label>
+                    <input type="text" name="" id="create_taskName">
+                </span>
+                <span class="inputs">
+                    <label for="">Task Description</label>
+                    <input type="text" name="" id="create_taskDesc">
+                </span>
+                <span class="inputs">
+                    <label for="">Date Due</label>
+                    <input type="date" name="" id="create_taskDue">
+                </span>
+                <span class="inputs">
+                    <label for="">Set Status</label>
+                    <select name="" id="create_isPublic">
+                        <option value="0">
+                            Private
+                        </option>
+                        <option value="1">
+                            Public
+                        </option>
+                    </select>
+                </span>
+            </section>
+            <section class="form_submit">
+                <input type="submit" value="Create Task">
+            </section>
+        </form>
+
+        <form method="post" id="form_add_subtask" class="form_add_subtask">
+            <section class="form_title">
+                <h1>Add Sub task</h1>
+            </section>
+            <section class="form_inputs">
+                <span class="inputs">
+                    <label for="">Main Task</label>
+                    <select name="" id="load_main_tasks">
+
+                        <!-- <option value="">Main Task</option> -->
+                    </select>
+                </span>
+                <span class="inputs">
+                    <label for="">Sub Task</label>
+                    <input type="text" name="" id="create_subTask">
+                </span>
+            </section>
+            <section class="form_submit">
+                <input type="submit" value="Add Sub Task">
+            </section>
+        </form>
+
+        <form method="post" id="edit_delete_task">
+            <section class="form_title">
+                <h1>Delete Task</h1>
+            </section>
+            <section class="form_inputs">
+                <span class="inputs">
+                    <label for="">Task Name</label>
+                    <select name="" id=""></select>
+                </span>
+            </section>
+            <section class="form_submit">
+                <input type="submit" name="" id="" value="Delete">
+            </section>
+        </form>
+    </div>
+</body>
+
+</html>

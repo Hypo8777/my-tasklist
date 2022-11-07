@@ -1,0 +1,148 @@
+* {
+    margin         : 0;
+    padding        : 0;
+    font-family    : 'Segoe UI Emoji';
+    box-sizing     : border-box;
+    text-decoration: none;
+    outline        : none;
+    transition     : .3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height          : 100%;
+    background-color: royalblue;
+}
+
+body::-webkit-scrollbar {
+    background-color: #0009;
+    width           : 8px;
+}
+
+
+body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius   : 1em;
+}
+
+
+
+.container {
+    /* height         : 100vh; */
+    /* width          : 100vw; */
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-between;
+    align-items    : center;
+}
+
+.container>section {
+    height         : 100vh;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+
+.forgot-section form {
+    display         : flex;
+    flex-direction  : column;
+    gap             : 1em;
+    background-color: #fff;
+    padding         : 1.5em;
+    width           : 40vw;
+    border-radius   : 5px;
+    box-shadow      : 0px 3px 1px #0003;
+}
+
+
+.forgot-section form .header-title {
+    display       : flex;
+    flex-direction: column;
+    align-items   : baseline;
+    gap           : 5px;
+}
+
+.forgot-section form .header-title .h-titles {
+    display        : flex;
+    justify-content: start;
+    align-items    : baseline;
+    gap            : 5px;
+}
+
+.forgot-section form .header-title .h-redirect p {
+    font-weight: bold;
+    font-size  : .8em;
+    color      : coral
+}
+
+
+
+.forgot-section form .user-inputs {
+    display       : flex;
+    flex-direction: column;
+    gap           : .5em;
+}
+
+.forgot-section form .user-inputs .inputs {
+    display        : flex;
+    flex-direction : column;
+    justify-content: stretch;
+    align-items    : stretch;
+    gap            : 5px;
+}
+
+.forgot-section form .user-inputs .inputs label {
+    font-weight: bold;
+    font-size  : .8em;
+}
+
+.forgot-section form .user-inputs .inputs input {
+    padding      : .5em;
+    border       : 2px solid dimgray;
+    border-radius: 5px;
+}
+
+.forgot-section form .user-submit input {
+    padding         : .5em;
+    border          : none;
+    text-transform  : uppercase;
+    font-weight     : bold;
+    border-radius   : 5px;
+    background-color: coral;
+    color           : #fff;
+    cursor: pointer;
+}
+
+
+
+.popup {
+    position  : fixed;
+    top       : 0;
+    left      : 0;
+    padding   : 5px;
+    z-index   : 1;
+    text-align: center;
+    width     : 100%;
+    color     : #fff;
+}
+
+/* ? If conditions are met */
+.popup-success {
+    background-color: limegreen;
+}
+
+.popup-fail {
+    background-color: crimson;
+}
+
+
+@media (min-width: 360px) and (max-width: 768px) {
+
+    .forgot-section form {
+        width: 90vw;
+    }
+}

@@ -1,0 +1,270 @@
+* {
+    margin         : 0;
+    padding        : 0;
+    font-family    : 'Segoe UI Emoji';
+    box-sizing     : border-box;
+    text-decoration: none;
+    outline        : none;
+    transition     : .3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height          : 100%;
+    background-color: royalblue;
+}
+
+body::-webkit-scrollbar {
+    background-color: #0009;
+    width           : 8px;
+}
+
+
+body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius   : 1em;
+}
+
+
+.container {
+    /* height         : 100vh; */
+    /* width          : 100vw; */
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-between;
+    align-items    : center;
+}
+
+.container>section {
+    height         : 100vh;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+
+.user-signin form,
+.user-signup form {
+    display         : flex;
+    flex-direction  : column;
+    gap             : .5em;
+    background-color: #fff;
+    padding         : 1.5em;
+    width           : 30vw;
+    border-radius   : 5px;
+    box-shadow      : 0px 3px 1px #0003;
+}
+
+
+
+.user-signin form .signin-header {
+    display       : flex;
+    flex-direction: column;
+}
+
+.user-signin form .signin-header .header-titles {
+    display        : flex;
+    justify-content: stretch;
+    align-items    : baseline;
+    gap            : 5px;
+}
+
+.user-signup form .signup-header .header-titles {
+    display        : flex;
+    flex-direction : row;
+    justify-content: stretch;
+    align-items    : baseline;
+    gap            : 5px;
+}
+
+
+
+.user-signin form .signin-header .header-redirect {
+    font-weight: bold;
+    font-size  : .8em;
+}
+
+.user-signup form .signup-header .header-titles h1,
+.user-signin form .signin-header .header-titles h5 {
+    color: royalblue;
+}
+
+.user-signup form .signup-header .header-titles h5,
+.user-signin form .signin-header .header-titles h1 {
+    color: orange;
+}
+
+.user-signin form .signin-header {
+    display        : flex;
+    justify-content: stretch;
+    align-items    : baseline;
+    gap            : 5px;
+}
+
+.user-signin form .user-inputs,
+.user-signup form .user-inputs {
+    display        : flex;
+    flex-direction : column;
+    gap            : 1.3em;
+    justify-content: stretch;
+    align-items    : stretch;
+}
+
+.user-signin form .user-inputs .inputs,
+.user-signup form .user-inputs .inputs {
+    display        : flex;
+    flex-direction : column;
+    justify-content: stretch;
+    align-items    : stretch;
+    gap            : 4px;
+    position       : relative;
+}
+
+.user-signin form .user-inputs .checkbx,
+.user-signup form .user-inputs .checkbx {
+    display        : flex;
+    justify-content: flex-end;
+    font-size      : .8em;
+    font-weight    : bold;
+}
+
+.user-signin form .user-inputs .checkbx label,
+.user-signup form .user-inputs .checkbx label {
+    cursor: pointer;
+}
+
+.user-signin form .user-inputs .inputs input,
+.user-signup form .user-inputs .inputs input {
+    padding      : .5em;
+    border       : 2px solid dimgray;
+    border-radius: 4px;
+}
+
+.user-signin form .user-inputs .inputs label,
+.user-signup form .user-inputs .inputs label {
+    font-weight   : bold;
+    font-size     : 1em;
+    position      : absolute;
+    top           : .3em;
+    left          : .5em;
+    pointer-events: none;
+    color         : dimgray;
+
+}
+
+
+.user-signin form .user-inputs .inputs :is(input:focus~label, input:valid ~ label),
+.user-signup form .user-inputs .inputs :is(input:focus~label, input:valid ~ label) {
+    top      : -1.5em;
+    left     : 0;
+    font-size: .8em;
+    color    : black;
+}
+
+.user-signin form .user-inputs .inputs :is(input:focus, input:valid),
+.user-signup form .user-inputs .inputs :is(input:focus, input:valid) {
+    border: 2px solid black;
+}
+
+.user-signin form .user-submit,
+.user-signup form .user-submit {
+    display        : flex;
+    flex-direction : column;
+    justify-content: stretch;
+    align-items    : center;
+    gap            : 1em;
+}
+
+.user-signin form .user-submit input[type='submit'] {
+    padding         : 8px;
+    border          : none;
+    background-color: royalblue;
+    color           : #fff;
+    text-transform  : uppercase;
+    border-radius   : 1em;
+    cursor          : pointer;
+}
+
+.user-signup form .user-submit input[type='submit'] {
+    padding         : 8px;
+    border          : none;
+    background-color: orange;
+    color           : #fff;
+    text-transform  : uppercase;
+    border-radius   : 1em;
+    cursor          : pointer;
+}
+
+.user-signin form .user-submit input[type='submit']:hover {
+    /* background-color: cornflowerblue; */
+    box-shadow: 1px 1px 1px black;
+}
+
+.user-signup form .user-submit input[type='submit']:hover {
+    /* background-color: orange; */
+    box-shadow: 1px 1px 1px black;
+}
+
+
+.user-signin form .user-submit input[type='submit']:active {
+    box-shadow : 1px 1px 1px black inset;
+    text-shadow: 1px 1px 1px black;
+}
+
+.user-signup form .user-submit input[type='submit']:active {
+    box-shadow : 1px 1px 1px black inset;
+    text-shadow: 1px 1px 1px black;
+}
+
+.user-signin form .user-submit p {
+    font-weight: bold;
+    font-size  : .8em;
+}
+
+.user-signup form .user-submit p {
+    font-weight: bold;
+    font-size  : .8em;
+}
+
+
+
+
+.popup {
+    position  : fixed;
+    top       : 0;
+    left      : 0;
+    padding   : 5px;
+    z-index   : 1;
+    text-align: center;
+    width     : 100%;
+    color     : #fff;
+}
+
+/* ? If conditions are met */
+.popup-success {
+    background-color: limegreen;
+}
+
+.popup-fail {
+    background-color: crimson;
+}
+
+
+
+
+/* ! No Changes as the global is already set  or you can specify*/
+/* Desktop-PC / Tablet View  */
+/* @media (min-width: 1000px) and (max-width: 1320px) {} */
+
+/* ! Specific Elements for mobile adjustments */
+/* Mobile View */
+@media (min-width: 360px) and (max-width: 768px) {
+
+    .user-signin form,
+    .user-signup form {
+        width: 90vw;
+    }
+}
