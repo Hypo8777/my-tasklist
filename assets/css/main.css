@@ -116,11 +116,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .container .content .nav-tasks .right-nav button:nth-child(5) {
-    background-color: orangered;
-    border          : 2px solid orangered;
-}
-
-.container .content .nav-tasks .right-nav button:nth-child(6) {
     background-color: crimson;
     border          : 2px solid crimson;
 }
@@ -193,17 +188,11 @@ body::-webkit-scrollbar-thumb {
 
 .task-card .task .task-title h5 {
     padding      : 5px;
-    border-radius: 5px;
     color        : #fff;
+    text-shadow  : 1px 1px 1px black;
+    border-bottom: 2px solid black;
 }
 
-.task-card .task .task-title h5:nth-child(1) {
-    background-color: royalblue;
-}
-
-.task-card .task .task-title h5:nth-child(3) {
-    background-color: crimson;
-}
 
 .task-card .task .task-name {
     text-align: center;
@@ -217,8 +206,12 @@ body::-webkit-scrollbar-thumb {
 .task-card .task .task-descr {
     background-color: #fff;
     border-radius   : 5px;
-    padding         : 5px;
+    padding         : 1rem;
 
+}
+
+.task-card .task .task-descr h5 {
+    padding: 5px;
 }
 
 .task-card .task .task-descr p {
@@ -229,69 +222,68 @@ body::-webkit-scrollbar-thumb {
     border-radius   : 5px;
     display         : flex;
     flex-direction  : column;
-    padding         : 10px;
+    padding         : 1rem;
     background-color: azure;
 }
 
-.task-card .task .task-sub summary {
-    cursor       : pointer;
-    padding      : 5px;
-    border-radius: 5px;
-    display      : flex;
+hr {
+    border          : none;
+    padding         : .1rem;
+    background-color: orange;
 }
 
-.task-card .task .task-sub .sub-div {
-    background-color: orange;
-    padding         : 5px;
-    display         : flex;
+.task-card .task .task-sub summary {
+    cursor : pointer;
+    display: flex;
+}
+
+.sub-div table tr td input {
+    accent-color: orange;
+}
+
+.sub-div table tr td label {
+    font-weight: bold;
+    cursor     : pointer;
+}
+
+.sub-div table tr td p {
+    font-size  : .7em;
+    font-weight: bold;
+}
+
+.sub-div table tr td a {
+    font-size  : .8em;
+    font-weight: bold;
+    color      : crimson;
+    cursor     : pointer;
 }
 
 
 .task-card .task-actions {
-    display            : flex;
-    flex-direction     : row;
-    justify-content    : start;
-    align-items        : center;
-    gap                : 5px;
-    width              : fit-content;
-    /* background-color: #fff; */
-    padding            : 5px;
-    border-radius      : 5px;
+    display        : flex;
+    flex-direction : row;
+    justify-content: center;
+    align-items    : center;
+    gap            : 5px;
+    padding        : 5px;
+    border-radius  : 5px;
 }
 
-.task-card .task-actions a {
-    padding       : 5px;
+.task-card .task-actions button {
+    padding       : .5em;
+    border        : none;
+    border-radius : 1em;
     font-weight   : bold;
+    cursor        : pointer;
     letter-spacing: 1px;
-    text-shadow   : 1px 1px 1px black;
+    text-transform: uppercase;
 }
 
-.task-card .task-actions a:nth-child(2) {
-    color: yellow;
+.task-card .task-actions button:hover {
+    box-shadow: 3px 3px 1px #0003;
 }
 
-.task-card .task-actions a:nth-child(2):hover {
-    background-color: yellow;
-    color           : #fff;
-    border-radius   : 1em;
-}
 
-.task-card .task-actions a:nth-child(3) {
-    color: orangered;
-}
-
-.task-card .task-actions a:nth-child(3):hover {
-    background-color: orangered;
-    color           : #fff;
-    border-radius   : 1em;
-}
-
-.task-card .task-actions a:nth-child(4) {
-    color: crimson;
-}
-
-.task-card .task-actions a:nth-child(4):hover {
-    background-color: crimson;
-    color           : #fff;
-    border-radius   : 1em;
+.task-card .task-actions button:active {
+    box-shadow: 3px 3px 1px #0003 inset;
 }
